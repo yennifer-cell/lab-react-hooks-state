@@ -7,7 +7,12 @@ export const sampleProducts = [
   { id: 2, name: 'Milk', price: '$2.50', category: 'Dairy', inStock: false }
 ]
 
-const ProductList = () => {
+const ProductList = ({ selectedCategory, addToCart }) => {
+  const filteredProducts =
+    selectedCategory === 'All'
+      ? sampleProducts
+      : sampleProducts.filter((product) => product.category === selectedCategory)
+
   return (
     <div>
       <h2>Available Products</h2>
