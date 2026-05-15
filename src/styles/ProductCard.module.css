@@ -1,5 +1,73 @@
-/* TODO (optional): Style the product card container */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
 
-/* TODO (optional): Add special styling for out-of-stock products */
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
 
-/* TODO (optional): Style the add/remove button */
+.card h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.card button {
+  padding: 0.6rem 1.2rem;
+  background-color: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.card button:hover {
+  background-color: #4f46e5;
+}
+
+.outOfStock {
+  opacity: 0.6;
+}
+
+.outOfStock button {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.outOfStock button:hover {
+  background-color: #94a3b8;
+}
+
+/* Dark mode support */
+:global(.dark-mode) .card {
+  background-color: #18181b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  border: 1px solid #27272a;
+}
+
+:global(.dark-mode) .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-color: #3f3f46;
+}
+
+:global(.dark-mode) .card p {
+  color: #a1a1aa;
+}
